@@ -1,0 +1,10 @@
+1.OPP class componeta va function componeta
+2.export va export default 
+3.props
+4.shart operatorlari qisqartmasi
+5.map va hodisalar loyiha kop sahifali loyiha 
+loyiha =>https://www.figma.com/file/2lP1tswGsEj2vSiJ8bU3DK/daCode---SaaS-Web-agency-website-(Community)?node-id=82%3A106
+6.router-dom useNavigate,useParams
+6.hook useState
+7.useState navbar,modal,tab, loyiha youtube 
+8.useEffect fetch

@@ -1,0 +1,26 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  font-family: sans-serif;
+}
+body{
+  max-width: 1440px ;
+  display: block;
+  margin: auto;
+}
+.cards{
+  display: grid;
+  grid-template-columns: repeat(3,auto);
+  gap: 30px;
+  background: #E9FBF8;
+  border-radius: 0px;
+  padding: 10px;
+}
+.card{
+  background: #FDFDFF;
+  box-shadow: 0px 97px 90px rgba(7, 0, 59, 0.15);
+  border-radius: 12px;
+  padding: 20px;
+}
