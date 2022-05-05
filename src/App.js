@@ -1,28 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
-import uitc from "./img/uitc_logo.png";
-import Home from "./pages/Home"
-import Navbar from './componets/Navbar';
-import Function,{FunctionMini} from "./2-dars/Function";
-import Class from "./2-dars/Class";
-import {MainSection2,MainSection} from "./2-dars/AllComponets"
-import Props from "./2-dars/Props"
-import Map from './2-dars/Map';
+import { BrowserRouter as Router, Routes, Route,Link } from "react-router-dom";
+import Home from "./3-dars/pages/Home";
+import Contact from "./3-dars/pages/Contact";
+import About from "./3-dars/pages/About";
+import Error from './3-dars/pages/Error';
+import { useState } from 'react';
 function App() {
-  const all = { name1:"Bahrom",name2:"Humoyun" }
+  const [ul, setUl] = useState(false)
+  const menuFun = () => {
+    setUl(!ul)
+  }
   return (
     <div className="App">
-      {/* <Function/>
-      <Class/>
-      <MainSection2/>
-      <MainSection/>
-      <FunctionMini/> */}
-    {/* <Props name="Bahrom" all={all} age="21"/>
-    <Props name="Humoyun" age/> */}
-    <Map/>
-
+     <Router>
+       <nav>
+         <div className="logo">LOGO</div>
+         <ul className={ul ? "ul activ" : "ul"}>
+            <li><Link onClick={menuFun} to="/">Home</Link></li>
+            <li><Link onClick={menuFun} to="/about">About</Link></li>
+            <li><Link onClick={menuFun} to="/contact">Contact</Link></li>
+         </ul>
+         <div className="menu">
+           <button onClick={menuFun} id='menu_btn'>Menu</button>
+         </div>
+       </nav>
+       <Routes>
+         <Route path='/' element={<Home/>} />
+         <Route path='/about' element={<About/>} />
+         <Route path='/contact' element={<Contact/>} />
+         <Route path='/contact/:id' element={<Contact/>} />
+         <Route path='*' element={<Error/>} />
+       </Routes>
+     </Router>
     </div>
   );
 }
-
 export default App;
