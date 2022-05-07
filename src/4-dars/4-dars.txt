@@ -1,0 +1,7 @@
+1.useState haqida
+2.useState modal oyna oddiysi
+3.useState massivlar va ularni tanlash boyicha ishlash
+---massivlar bilan ishlash 
+---massiv bilan moadal oyna qilish
+---massiv bilan tab qilish
+3.useState da massivni map qilish
