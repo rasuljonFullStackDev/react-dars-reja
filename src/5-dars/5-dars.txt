@@ -1,0 +1,5 @@
+1.useState object
+2.useState orqli inputlardan qiymat olish
+3.filter tayyorlash
+4.otilgan darslarni takrorlash
+5.localstorage

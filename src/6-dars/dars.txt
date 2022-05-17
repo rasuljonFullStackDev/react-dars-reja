@@ -1,0 +1,28 @@
+import React from 'react'
+import Export from "./6-dars/Export"
+import { MiniFun, MiniFun1, MiniFun2 } from './6-dars/ExportAll'
+import Map from './6-dars/Map'
+import Props from './6-dars/Props'
+import "./App.css";
+const App = () => {
+  let data = {
+    name:"Some of our SaaS clients ",
+    text:"We take your SaaS idea and make it into reality. We start with going into why and what your are looking for. Then after brainstorming on branding and strategy we are going into the details of what what and why the you want to create a website. In order to make the creation process as smooth and effective as possible then we are working in an agile/scrum way in order to make sure we can deliver on time and within budget for our clients."
+  }
+  return (
+    <div>
+      {/* funksiyalar */}
+    <Export/>
+    {/* kop chaqiriladigan funksiya */}
+    <MiniFun/>
+    <MiniFun1/>
+    <MiniFun2/>
+    {/* <Props name="Humoyun"/> */}
+    <Props name="Tolibjon" oby={data} />
+    {/* map */}
+    <Map/>
+    </div>
+  )
+}
+
+export default App

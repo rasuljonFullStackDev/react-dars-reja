@@ -1,65 +1,73 @@
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   border: none;
   font-family: sans-serif;
 }
-body{
-  max-width: 1440px ;
+
+body {
+  max-width: 1440px;
   display: block;
   margin: auto;
 }
-.cards{
+
+.cards {
   display: grid;
-  grid-template-columns: repeat(3,auto);
+  grid-template-columns: repeat(3, 33%);
   gap: 30px;
   background: #E9FBF8;
   border-radius: 0px;
   padding: 10px;
 }
-.card{
+
+.card {
   background: #FDFDFF;
   box-shadow: 0px 97px 90px rgba(7, 0, 59, 0.15);
   border-radius: 12px;
   padding: 20px;
 }
 
-button{
+button {
   padding: 10px;
   background: crimson;
   color: white;
   font-size: 25px;
   margin: 20px;
 }
-.btn.activ{
+
+.btn.activ {
   background: cornflowerblue;
 }
 
-nav{
+nav {
   padding: 30px 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.logo{
+
+.logo {
   font-size: 25px;
   color: cyan;
 }
-ul{
+
+ul {
   gap: 30px;
   display: flex;
   align-items: center;
 }
-.menu{
+
+.menu {
   display: none;
 }
+
 @media (max-width:768px) {
-  nav{
+  nav {
     position: relative;
   }
-  ul{
+
+  ul {
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -70,65 +78,155 @@ ul{
     flex-direction: column;
     background: rgba(0, 0, 0, 0.5);
   }
-  ul.activ{
+
+  ul.activ {
     left: 0;
   }
-  .menu{
+
+  .menu {
     display: block;
   }
 }
 
 
 
-.modal{
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.5);
+button.activ {
+  background: cadetblue;
+}
+
+.corusel .img__ {
+  padding: 20px;
+}
+
+.img__ img {
+  width: 100%;
+}
+
+body .slick-next {
+  right: 0;
+}
+
+body .slick-prev {
+  z-index: 99;
+}
+
+body .slick-prev:before,
+body .slick-next:before {
+  color: crimson;
+  font-size: 40px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid gray;
+  outline: none;
+  font-size: 18px;
+  display: block;
+  margin: 20px;
+  border-radius: 5px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 50px;
+}
+
+.grid>div {
+  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+
+.grid img {
+  width: 100%;
+}
+
+.search input {
+  display: block;
+  margin: 20px auto;
+}
+
+.card.activ {
+  background: crimson;
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   opacity: 0;
   z-index: -99;
   transition: all 0.4s ease-in-out;
 }
-.modal.activ{
+
+.modal.activ {
   opacity: 1;
   z-index: 99;
 }
-.modal_body{
-  width: 400px;
-  background: #fff;
-  padding: 40px;
+
+.modal_body {
+  width: 600px;
+  background: white;
+  padding: 30px;
   position: relative;
 }
-.close{
+
+.close {
   position: absolute;
   top: 0;
   right: 0;
 }
 
-button.activ{
-  background: cadetblue;
+.btn.activ {
+  background: cyan;
 }
-.corusel .img__{
-  padding: 20px;
-}
-.img__ img{
+
+.card img {
   width: 100%;
 }
-body{
-  /* background: red; */
+
+html,
+body {
+  overflow-x: hidden;
 }
-body .slick-next{
-  right: 0;
+
+.load {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(7, 0, 59, 0.55);
+  width: 100%;
+  height: 100%;
+  z-index: -99;
+  opacity: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+
 }
-body .slick-prev{
+
+.load img {
+  border-radius: 50%;
+}
+
+.load.activ {
   z-index: 99;
+  opacity: 1;
+
 }
-body .slick-prev:before,body .slick-next:before{
-  color: crimson;
-  font-size: 40px;
+
+.cardDetil {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: 50% 50%;
+  padding: 50px;
 }

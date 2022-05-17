@@ -1,0 +1,12 @@
+1.amaliyot
+2.takrorlash
+---export funksiya
+---props
+---massivlardan foydalanish
+---map
+---onclick
+---massivlar ichidan tanlash
+---useState
+---useEffect
+---corusel
+
