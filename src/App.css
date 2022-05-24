@@ -195,7 +195,9 @@ html,
 body {
   overflow-x: hidden;
 }
-
+a{
+  cursor: pointer !important;
+}
 .load {
   position: fixed;
   top: 0;
@@ -210,7 +212,6 @@ body {
   justify-content: center;
   align-items: center;
   transition: all 0.4s ease-in-out;
-
 }
 
 .load img {
@@ -229,4 +230,13 @@ body {
   align-content: center;
   grid-template-columns: 50% 50%;
   padding: 50px;
+}
+
+.dark{
+  background: black;
+  color: white;
+}
+.dark.activ{
+  background: white;
+  color: black;
 }
