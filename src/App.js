@@ -7,7 +7,7 @@ import ProductDetils from "./8-dars/ProductDetils";
 import ContextPage from './11-dars/ContextPage';
 import ContextPage2 from './11-dars/ContextPage2';
 import { DataContext } from './11-dars/DataContext';
-
+import Input from './12-dars/Input';
 const App = () => {
     const [ul, setUl] = useState(false)
     const menuFun = () => {
@@ -16,11 +16,12 @@ const App = () => {
     const {dark,setDark} = useContext(DataContext);
     const darkMode = () =>{
       setDark(!dark)
+      
     }
   return (
     <div>
      <Router>
-       <nav style={dark ? {background:'black'} : {background:"white"}}>
+       {/* <nav style={dark ? {background:'black'} : {background:"white"}}>
          <div className="logo">
          <Link onClick={menuFun} to="/">LOGO</Link>
            </div>
@@ -32,9 +33,10 @@ const App = () => {
          <div className="menu">
            <button onClick={menuFun} id='menu_btn'>Menu</button>
          </div>
-       </nav>
+       </nav> */}
        <Routes>
-         <Route path='/' element={<ContextPage/>} />
+         {/* <Route path='/' element={<ContextPage/>} /> */}
+         <Route path='/' element={<Input/>} />
          <Route path='/page2' element={<ContextPage2/>} />
          {/* <Route path='/product/:id' element={<ProductDetils/>} /> */}
        </Routes>

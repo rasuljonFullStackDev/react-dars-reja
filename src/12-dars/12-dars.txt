@@ -1,0 +1,2 @@
+1.inputdan malumot olish
+***amaliyot crud
