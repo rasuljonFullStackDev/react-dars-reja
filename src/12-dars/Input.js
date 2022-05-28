@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Input = () => {
     const [input, setInput] = useState({
@@ -36,6 +36,7 @@ const Input = () => {
         })
         modalFun()
     }
+    
     const [modal, setModal] = useState(false);
     const inputFun = (e) => {
         setInput({ ...input, [e.target.name]: e.target.value });
@@ -68,6 +69,14 @@ const Input = () => {
         })
         setResult(false);
     }
+    useEffect(()=>{
+        window.addEventListener('click',(e)=>{
+            console.log(e.target);
+            if(e.target.className.toLowerCase().indexOf("modal_crud activ") !==-1){
+                modalFun();
+            }
+        })
+    },[])
     return (
         <div className='form'>
             {/* moadal */}
