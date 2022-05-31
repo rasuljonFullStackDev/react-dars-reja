@@ -20,8 +20,7 @@ const DataContextProvider = ({ children }) => {
             color: "",
             count: 0
         }
-    });
-
+    });    
     const validator = () => {
         for (let key in value.validator) {
             if (value[key] === "") {

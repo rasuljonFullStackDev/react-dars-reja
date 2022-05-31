@@ -4,14 +4,13 @@ import "./App.css"
 import List from './13-dars/List';
 import Add from './13-dars/Add';
 import Edit from './13-dars/Edit';
+import Takrorlash from './14-dars/Takrorlash';
 const App = () => {
-    
-  
   return (
     <div>
      <Router>
        <Routes>
-         <Route path='/' element={<List/>} />
+         <Route path='/' element={<Takrorlash/>} />
          <Route path='/add' element={<Add/>} />
          <Route path='/edit/:id' element={<Edit/>} />
        </Routes>
