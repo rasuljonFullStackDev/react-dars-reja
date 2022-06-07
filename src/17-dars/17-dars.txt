@@ -7,3 +7,4 @@
 ***status=delete_data  =>request method=post
 ***status=update_data, =>request method=post
 api key=username,password,img
+http://localhost:3000/
