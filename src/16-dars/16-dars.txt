@@ -1,0 +1,7 @@
+1.uitc talabari uchun mustaqil ta'lim
+***github organish
+---.https://www.youtube.com/watch?v=x3zsFUdR4oM&list=RDCMUC0GMMbVLh2eNmsAPCmXOafw&index=1
+---https://www.youtube.com/watch?v=o1eYhBLYTlk&list=RDCMUC0GMMbVLh2eNmsAPCmXOafw&index=2
+2.crud figmani bajarish
+---https://www.figma.com/file/I1Ouea2M8Ul2FDPm4RgAGC/react-crud?node-id=0%3A1
+3.count

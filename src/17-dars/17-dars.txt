@@ -1,0 +1,9 @@
+1.useState, useEffect,usecontext,useRef takrorlash
+2.api bilan ishlash
+3.backend bilan crud qilish
+*** https://rasuljon.uz/back-end/crud.php
+***status=add_data =>request method=post
+***status=read_json  =>request method=get
+***status=delete_data  =>request method=post
+***status=update_data, =>request method=post
+api key=username,password,img

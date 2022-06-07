@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 
 export const DataContextTakror = React.createContext()
-
 const DataContextTakrorProvider = ({ children }) => {
     const [data1,setData1] = useState({
         name:"Bahrom"
@@ -12,5 +11,4 @@ const DataContextTakrorProvider = ({ children }) => {
         </DataContextTakror.Provider>
     )
 }
-
-export default DataContextTakrorProvider
+export default DataContextTakrorProvider;
