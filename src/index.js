@@ -3,13 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './App.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import DataContextTakrorProvider from './14-dars/Api/DataContextTakror';
+import { ReducerContextProvider } from './21-dars/api/ReucerContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <DataContextTakrorProvider>
+  <ReducerContextProvider>
       <App />
-    </DataContextTakrorProvider>
-  </React.StrictMode>
+  </ReducerContextProvider>
 );
 reportWebVitals();

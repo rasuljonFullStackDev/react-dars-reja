@@ -1,0 +1,4 @@
+1.useState, useEffect,UseRef,useContext,
+export, export default, map, axios,formData
+2.useReducers haqida tushuncha
+3.loyiha useContext va useReducers

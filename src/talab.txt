@@ -1,0 +1,27 @@
+1.export va export default
+2.props
+3.map
+4.useState
+5.useEffect
+6.useRef
+7.usecontext
+8.api
+9. axios
+10. localStorage va inputdan qiymat olish
+11. crud
+12. crud localStorage
+13. crud api
+14. data filter qilish
+15.modal
+16. datani ichidagi malumotni ixtiyoriy tanlaganimizda ushbu malumot modal oynaga chiqishi
+****amaliy
+1.nav
+2.tab
+3.modal
+4.map qilingan modal
+5.count
+6.map qilingan malumotni count qilish
+7.crud odddiy
+8.localStorage crud
+9. crud api 
+10. crud api filter

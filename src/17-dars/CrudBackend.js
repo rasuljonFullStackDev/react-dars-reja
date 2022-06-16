@@ -7,10 +7,18 @@ const CrudBackend = () => {
         username: "",
         password: "",
         img: "",
-        code:""
+        code: "",
+        id: ""
     })
     const modalOpen = () => {
         setModal(!modal)
+        setInput({
+            username: "",
+            password: "",
+            img: "",
+            id: ""
+        })
+        setShow({})
     }
     const jsonData = () => {
         axios({
@@ -22,9 +30,9 @@ const CrudBackend = () => {
             })
             .catch((err) => {
                 console.log(err);
-                const {code} = err;
-                setInput({...input,code:code})
-                if(code){
+                const { code } = err;
+                setInput({ ...input, code: code })
+                if (code) {
                     alert("net yoq")
                 }
             })
@@ -38,9 +46,15 @@ const CrudBackend = () => {
         e.preventDefault();
         console.log(input);
         let formData = new FormData();////malumot jonatish uchun ishlatiladi
-        formData.append('status', 'add_data')
         formData.append('username', input.username)
         formData.append('password', input.password)
+        if (input.id !== "") {
+            formData.append('status', 'update_data')
+            formData.append('id', input.id)
+
+        } else {
+            formData.append('status', 'add_data')
+        }
         formData.append('img', input.img)
         axios({
             url: "https://rasuljon.uz/back-end/crud.php",
@@ -92,6 +106,25 @@ const CrudBackend = () => {
                 console.log(err);
             })
     }
+    // edit
+    const editFun = (val) => {
+        modalOpen();
+        setInput({
+            username: val.username,
+            password: val.password,
+            img: val.img,
+            id: val.id
+        })
+
+
+
+    }
+    const [show, setShow] = useState({});
+    const showFun = (val) => {
+        modalOpen()
+        setShow(val);
+
+    }
     return (
         <div className='crud'>
             <h1>Add crud</h1>
@@ -117,8 +150,8 @@ const CrudBackend = () => {
                                 <td>{val.username}</td>
                                 <td>{val.password}</td>
                                 <td>
-                                    <button>show</button>
-                                    <button>edit</button>
+                                    <button onClick={() => showFun(val)}>show</button>
+                                    <button onClick={() => editFun(val)}>edit</button>
                                     <button onClick={() => deleteFun(val.id)}>delete</button>
                                 </td>
                             </tr>
@@ -128,13 +161,26 @@ const CrudBackend = () => {
             </table>
             <div className={modal ? "modal activ" : "modal"}>
                 <div className="modal_body">
-                    <form onSubmit={send}>
-                        <input type="text" onChange={inputFun} name="username" value={input.username} placeholder='username' />
-                        <input type="password"
-                            onChange={inputFun} name="password" value={input.password} placeholder='password' />
-                        <input type="file" onChange={imgUpload} name='img' placeholder='password' />
-                        <button type='submit'>Add</button>
-                    </form>
+                    {
+                        show.username ?
+                            <>
+                                <h1>{show.username}</h1>
+                                <p>{show.password}</p>
+                                <div>
+                                    <img style={{ width: "100px", height: "100px" }} src={show.img} alt="" />
+                                </div>
+                            </>
+                            :
+                            <form onSubmit={send}>
+                                <input type="text" onChange={inputFun} name="username" value={input.username} placeholder='username' />
+                                <input type="password"
+                                    onChange={inputFun} name="password" value={input.password} placeholder='password' />
+                                <input type="file" onChange={imgUpload} name='img' placeholder='password' />
+                                <button type='submit'>
+                                    {input.id !== "" ? "EDIT" : "ADD"}
+                                </button>
+                            </form>
+                    }
                     <button className="close" onClick={modalOpen}>X</button>
                 </div>
             </div>

@@ -1,9 +1,13 @@
 import React from 'react'
-import CrudBackend from './17-dars/CrudBackend'
+import IndexReducer from './20-dars/Reducer/IndexReducer'
+import Reducers from './20-dars/Reducers'
+import List from './21-dars/List'
+
+
 const App = () => {
   return (
     <div>
-      <CrudBackend/>
+      <List/>
     </div>
   )
 }
