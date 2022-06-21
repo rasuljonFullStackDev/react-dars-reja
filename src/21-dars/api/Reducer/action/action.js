@@ -6,3 +6,18 @@ export const add = (data) =>{
         payload:data
     }
 }
+
+export const deleteFun = (data) =>{
+    return{
+        type:actionType.delete,
+        payload:data
+    }
+}
+
+
+export const listAdd = (data) =>{
+    return{
+        type:actionType.listAdd,
+        payload:data
+    }
+}

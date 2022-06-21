@@ -1,3 +1,5 @@
 export const actionType = {
-    add:"add"
+    add:"add",
+    delete:"delete",
+    listAdd:"listAdd"
 }
